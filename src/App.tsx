@@ -1,5 +1,5 @@
 // App.tsx
-import React from 'react';
+
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import EveryCity from './components/EveryCity';
 import WeatherInfo from './components/WeatherInfo';

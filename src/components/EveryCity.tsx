@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 
+
+
 const EveryCity: React.FC = () => {
   const [cities, setCities] = useState<any[]>([]);
   const [searchTerm, setSearchTerm] = useState<string>('');
@@ -78,13 +80,14 @@ const EveryCity: React.FC = () => {
             <tr key={city.recordid}>
               <td style={{ border: '1px solid black', padding: '8px' }}>
                 <Link
-                  to={{
-                    pathname: `/weather/${city.fields.ascii_name}`,
-                    state: {
+                  to= {
+                     `/weather/${city.fields.ascii_name}`
+                }
+                    state = {{
                       latitude: city.fields.coordinates[1],
                       longitude: city.fields.coordinates[0],
-                    },
-                  }}
+                    }}
+                  
                 >
                   {city.fields.ascii_name}
                 </Link>
